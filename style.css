@@ -42,33 +42,52 @@ div.pinouts {
   justify-content: space-evenly;
 }
 
-figure {
+.pinout {
   background: var(--color2) linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25));
   display: flex;
   flex-flow: column;
-  padding: 0.5em;
-  max-width: 512px;
-  margin: 0 0 3em;
+  width: 512px;
+  margin: 0 0 2em;
+  padding: 1em;
   /*box-shadow: 0.25em 0.25em 0.25em rgba(0, 0, 0, 0.25);*/
 }
 
-figure h2 {
+.pinout h2 {
     text-align: center;
     font-size: 2em;
     margin: 0;
 }
 
-figure svg {
-    width: 256px;
-    max-width: 50%;
+.pinout .plugs {
+    display: flex;
+    flex-flow: row;
 }
 
-figure figcaption {
+.pinout .plugs figure {
+    margin: 0 0 1em;
+}
+
+.pinout .plugs figure svg {
+    width: 100%;
+}
+
+.pinout .plugs figure figcaption {
+    font-family: Raleway;
+    font-weight: 900;
+    text-align: center;
+    color: var(--color5);
+}
+
+footer {
     font-size: 0.7em;
-    color: var(--color1);
+    color: var(--color2);
     text-align: center;
     font-style: italic;
     margin-top: 1.5em;
+}
+
+footer a {
+    color: var(--color3);
 }
 
 table {
@@ -103,12 +122,17 @@ table tbody th, table tbody td {
     padding: 0.3em;
 }
 
+table tr.optional th, table tr.optional td {
+    background: rgba(0,0,0,0.1);
+}
+
 @media (min-width: 513px) {
     h1 {
         font-size: 4em;
     }
 
-    figure {
+    .pinout {
         border-radius: 0.5em;
+        margin-bottom: 3em;
     }
 }
