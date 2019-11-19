@@ -1,0 +1,114 @@
+/* https://coolors.co/0c1618-004643-faf4d3-d1ac00-f6be9a */
+:root {
+    --color1: rgba(12, 22, 24, 1);
+    --color2: rgba(0, 70, 67, 1);
+    --color3: rgba(250, 244, 211, 1);
+    --color4: rgba(209, 172, 0, 1);
+    --color5: rgba(246, 190, 154, 1);
+}
+/* https://coolors.co/333333-666a86-faf4d3-42f2f7-46acc2 */
+:root {
+    --color1: #333333;
+    --color2: #666a86;
+    --color3: rgba(250, 244, 211, 1);
+    --color4: rgba(66, 242, 247, 1);
+    --color5: #edafb8;
+}
+
+html {
+  background: var(--color1);
+  font-family: Lato, sans-serif;
+  color: var(--color3);
+}
+
+h1, h2, h3 {
+  font-family: Raleway, sans-serif;
+  font-weight: 900;
+  /*font-style: italic;*/
+}
+
+h1 {
+    background-color: var(--color2);
+    color: var(--color1);
+    font-size: 3em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+div.pinouts {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+figure {
+  background: var(--color2) linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25));
+  display: flex;
+  flex-flow: column;
+  padding: 0.5em;
+  max-width: 512px;
+  margin: 0 0 3em;
+  /*box-shadow: 0.25em 0.25em 0.25em rgba(0, 0, 0, 0.25);*/
+}
+
+figure h2 {
+    text-align: center;
+    font-size: 2em;
+    margin: 0;
+}
+
+figure svg {
+    width: 256px;
+    max-width: 50%;
+}
+
+figure figcaption {
+    font-size: 0.7em;
+    color: var(--color1);
+    text-align: center;
+    font-style: italic;
+    margin-top: 1.5em;
+}
+
+table {
+  text-align: center;
+  table-layout: fixed;
+  width: 100%;
+  font-size: 1.1em;
+}
+
+table col.pin-num {
+    width: 10%;
+}
+
+table col.pin-dest-1 {
+    width: 90%;
+}
+
+table col.pin-dest-2 {
+    width: 45%;
+}
+
+table thead th {
+  color: var(--color1);
+  background-color: var(--color3);
+  font-weight: 900;
+  font-family: Raleway, sans-serif;
+  /*font-size: 1.2em;*/
+}
+
+table tbody th, table tbody td {
+    border-bottom: 1px rgba(250, 244, 211, 0.1) dashed;
+    padding: 0.3em;
+}
+
+@media (min-width: 513px) {
+    h1 {
+        font-size: 4em;
+    }
+
+    figure {
+        border-radius: 0.5em;
+    }
+}
