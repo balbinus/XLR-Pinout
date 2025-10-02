@@ -39,13 +39,13 @@ h1 {
     text-align: center;
     text-transform: uppercase;
     box-shadow: 0.5rem 0.5rem 0.05rem rgba(0, 0, 0, 0.25);
-}
 
-h1 span {
-    background-color: var(--color1);
-    color: #0003;
-    text-shadow: 0.1rem 0.1rem 0.2rem rgba(196, 196, 196, 0.14);
-    background-clip: text;
+    span {
+        background-color: var(--color1);
+        color: #0003;
+        text-shadow: 0.1rem 0.1rem 0.2rem rgba(196, 196, 196, 0.14);
+        background-clip: text;
+    }
 }
 
 div.pinouts {
@@ -54,85 +54,77 @@ div.pinouts {
     align-items: flex-start;
     justify-content: space-evenly;
     align-items: stretch;
-}
 
-.pinout {
-    background: var(--color2) linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25));
-    display: flex;
-    flex-flow: column;
-    width: 512px;
-    margin: 0 0 2em;
-    padding: 1em;
-    box-shadow: 0.5rem 0.5rem 0.05rem rgba(0, 0, 0, 0.25);
-}
+    .pinout {
+        background: var(--color2) linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25));
+        display: flex;
+        flex-flow: column;
+        width: 512px;
+        margin: 0 0 2em;
+        padding: 1em;
+        box-shadow: 0.5rem 0.5rem 0.05rem rgba(0, 0, 0, 0.25);
 
-.pinout h2 {
-    text-align: center;
-    font-size: 2em;
-    margin: 0 0 1rem 0;
-    padding: 0.3rem 0;
-    text-transform: uppercase;
-    background: var(--color3);
-    color: var(--color2);
-    border-radius: 0.5rem;
-    box-shadow: 0.5rem 0.5rem 0.05rem rgba(0, 0, 0, 0.25);
-}
+        h2 {
+            text-align: center;
+            font-size: 2em;
+            margin: 0 0 1rem 0;
+            padding: 0.3rem 0;
+            text-transform: uppercase;
+            background: var(--color3);
+            color: var(--color2);
+            border-radius: 0.5rem;
+            box-shadow: 0.5rem 0.5rem 0.05rem rgba(0, 0, 0, 0.25);
+        }
 
-.pinout .plugs {
-    display: flex;
-    flex-flow: row;
-}
+        .plugs {
+            display: flex;
+            flex-flow: row;
 
-.pinout .plugs figure {
-    margin: 0 0 1em;
-}
+            figure {
+                margin: 0 0 1em;
 
-.pinout .plugs figure svg {
-    width: 100%;
-}
+                svg {
+                    width: 100%;
+                }
 
-.pinout .plugs figure figcaption {
-    font-weight: 900;
-    text-align: center;
-    color: var(--color5);
-    text-transform: uppercase;
-}
+                figcaption {
+                    font-weight: 900;
+                    text-align: center;
+                    color: var(--color5);
+                    text-transform: uppercase;
+                }
+            }
+        }
 
-table {
-    text-align: center;
-    table-layout: fixed;
-    width: 100%;
-    font-size: 1.1em;
-}
+        table {
+            text-align: center;
+            table-layout: fixed;
+            width: 100%;
+            font-size: 1.1em;
 
-table col.pin-num {
-    width: 15%;
-}
+            col.pin-num { width: 15%; }
+            col.pin-dest-1 { width: 90%; }
+            col.pin-dest-2 { width: 45%; }
 
-table col.pin-dest-1 {
-    width: 90%;
-}
+            th, td {
+                padding: 0.4rem;
+            }
 
-table col.pin-dest-2 {
-    width: 45%;
-}
+            thead th {
+                color: var(--color1);
+                background-color: var(--color3);
+                font-weight: 900;
+            }
 
-table th, table td {
-    padding: 0.4rem;
-}
+            tbody th, tbody td {
+                border-bottom: 1px rgba(250, 244, 211, 0.1) dashed;
+            }
 
-table thead th {
-    color: var(--color1);
-    background-color: var(--color3);
-    font-weight: 900;
-}
-
-table tbody th, table tbody td {
-    border-bottom: 1px rgba(250, 244, 211, 0.1) dashed;
-}
-
-table tr.optional th, table tr.optional td {
-    background: rgba(0,0,0,0.1);
+            tr.optional th, tr.optional td {
+                background: rgba(0,0,0,0.1);
+            }
+        }
+    }
 }
 
 footer {
@@ -141,10 +133,10 @@ footer {
     text-align: center;
     font-style: italic;
     margin: 1.5em;
-}
 
-footer a {
-    color: var(--color3);
+    a {
+        color: var(--color3);
+    }
 }
 
 @media (min-width: 513px) {
