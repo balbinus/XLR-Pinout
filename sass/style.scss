@@ -1,3 +1,7 @@
+@use 'normalize.css/normalize.css';
+@use "@fontsource-variable/raleway/wght.css";
+@use "@fontsource-variable/raleway/wght-italic.css";
+
 /* https://coolors.co/333333-666a86-faf4d3-42f2f7-46acc2 */
 :root {
     --color1: #333333;
@@ -7,7 +11,7 @@
     --color5: #edafb8;
 }
 
-@media (prefers-color-scheme: da) {
+@media (prefers-color-scheme: dark) {
     /* https://coolors.co/0c1618-004643-faf4d3-d1ac00-f6be9a */
     :root {
         --color1: rgba(12, 22, 24, 1);
@@ -20,12 +24,11 @@
 
 html {
     background: var(--color1);
-    font-family: Lato, sans-serif;
+    font-family: "Raleway Variable", sans-serif;
     color: var(--color3);
 }
 
 h1, h2, h3 {
-    font-family: Raleway, sans-serif;
     font-weight: 900;
 }
 
@@ -89,7 +92,6 @@ div.pinouts {
 }
 
 .pinout .plugs figure figcaption {
-    font-family: Raleway;
     font-weight: 900;
     text-align: center;
     color: var(--color5);
@@ -123,7 +125,6 @@ table thead th {
     color: var(--color1);
     background-color: var(--color3);
     font-weight: 900;
-    font-family: Raleway, sans-serif;
 }
 
 table tbody th, table tbody td {

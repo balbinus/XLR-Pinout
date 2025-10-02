@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "@fontsource-variable/raleway": "^5.2.8",
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "vite": "^7.1.8"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --base '' --emptyOutDir",
+    "preview": "vite preview"
+  }
+}
