@@ -1,11 +1,3 @@
-/* https://coolors.co/0c1618-004643-faf4d3-d1ac00-f6be9a */
-:root {
-    --color1: rgba(12, 22, 24, 1);
-    --color2: rgba(0, 70, 67, 1);
-    --color3: rgba(250, 244, 211, 1);
-    --color4: rgba(209, 172, 0, 1);
-    --color5: rgba(246, 190, 154, 1);
-}
 /* https://coolors.co/333333-666a86-faf4d3-42f2f7-46acc2 */
 :root {
     --color1: #333333;
@@ -15,16 +7,26 @@
     --color5: #edafb8;
 }
 
+@media (prefers-color-scheme: da) {
+    /* https://coolors.co/0c1618-004643-faf4d3-d1ac00-f6be9a */
+    :root {
+        --color1: rgba(12, 22, 24, 1);
+        --color2: rgba(0, 70, 67, 1);
+        --color3: rgba(250, 244, 211, 1);
+        --color4: rgba(209, 172, 0, 1);
+        --color5: rgba(246, 190, 154, 1);
+    }
+}
+
 html {
-  background: var(--color1);
-  font-family: Lato, sans-serif;
-  color: var(--color3);
+    background: var(--color1);
+    font-family: Lato, sans-serif;
+    color: var(--color3);
 }
 
 h1, h2, h3 {
-  font-family: Raleway, sans-serif;
-  font-weight: 900;
-  /*font-style: italic;*/
+    font-family: Raleway, sans-serif;
+    font-weight: 900;
 }
 
 h1 {
@@ -33,30 +35,44 @@ h1 {
     font-size: 3em;
     text-align: center;
     text-transform: uppercase;
+    box-shadow: 0.5rem 0.5rem 0.05rem rgba(0, 0, 0, 0.25);
+}
+
+h1 span {
+    background-color: var(--color1);
+    color: #0003;
+    text-shadow: 0.1rem 0.1rem 0.2rem rgba(196, 196, 196, 0.14);
+    background-clip: text;
 }
 
 div.pinouts {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: flex-start;
-  justify-content: space-evenly;
-  align-items: stretch;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    align-items: stretch;
 }
 
 .pinout {
-  background: var(--color2) linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25));
-  display: flex;
-  flex-flow: column;
-  width: 512px;
-  margin: 0 0 2em;
-  padding: 1em;
-  /*box-shadow: 0.25em 0.25em 0.25em rgba(0, 0, 0, 0.25);*/
+    background: var(--color2) linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25));
+    display: flex;
+    flex-flow: column;
+    width: 512px;
+    margin: 0 0 2em;
+    padding: 1em;
+    box-shadow: 0.5rem 0.5rem 0.05rem rgba(0, 0, 0, 0.25);
 }
 
 .pinout h2 {
     text-align: center;
     font-size: 2em;
-    margin: 0;
+    margin: 0 0 1rem 0;
+    padding: 0.3rem 0;
+    text-transform: uppercase;
+    background: var(--color3);
+    color: var(--color2);
+    border-radius: 0.5rem;
+    box-shadow: 0.5rem 0.5rem 0.05rem rgba(0, 0, 0, 0.25);
 }
 
 .pinout .plugs {
@@ -77,17 +93,18 @@ div.pinouts {
     font-weight: 900;
     text-align: center;
     color: var(--color5);
+    text-transform: uppercase;
 }
 
 table {
-  text-align: center;
-  table-layout: fixed;
-  width: 100%;
-  font-size: 1.1em;
+    text-align: center;
+    table-layout: fixed;
+    width: 100%;
+    font-size: 1.1em;
 }
 
 table col.pin-num {
-    width: 10%;
+    width: 15%;
 }
 
 table col.pin-dest-1 {
@@ -98,17 +115,19 @@ table col.pin-dest-2 {
     width: 45%;
 }
 
+table th, table td {
+    padding: 0.4rem;
+}
+
 table thead th {
-  color: var(--color1);
-  background-color: var(--color3);
-  font-weight: 900;
-  font-family: Raleway, sans-serif;
-  /*font-size: 1.2em;*/
+    color: var(--color1);
+    background-color: var(--color3);
+    font-weight: 900;
+    font-family: Raleway, sans-serif;
 }
 
 table tbody th, table tbody td {
     border-bottom: 1px rgba(250, 244, 211, 0.1) dashed;
-    padding: 0.3em;
 }
 
 table tr.optional th, table tr.optional td {
@@ -135,6 +154,10 @@ footer a {
     .pinout {
         border-radius: 0.5em;
         margin-bottom: 3em;
+    }
+
+    table col.pin-num {
+        width: 10%;
     }
 }
 
