@@ -1,9 +1,7 @@
 {
-  "dependencies": {
-    "@fontsource-variable/raleway": "^5.2.8",
-    "normalize.css": "^8.0.1"
-  },
   "devDependencies": {
+    "@fontsource-variable/raleway": "^5.2.8",
+    "normalize.css": "^8.0.1",
     "vite": "^7.1.8"
   },
   "scripts": {
